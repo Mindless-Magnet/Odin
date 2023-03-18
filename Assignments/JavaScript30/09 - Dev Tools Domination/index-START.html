@@ -17,29 +17,44 @@
       p.style.color = '#BADA55';
       p.style.fontSize = '50px';
     }
-    //Hi Hello
+    
     // Regular
     console.log('Hello')
     // Interpolated
     console.log('hello I am a %s string','shit')
     // Styled
-
+    console.log('%c Italic', 'font-style: italic; background-color: blue; font-size:20px; text-shadow: 4px 0px 0 black')
     // warning!
-
+    console.warn('oh no')
     // Error :|
-
+    console.error('error')
     // Info
-
+    console.info('The  world is flat')
     // Testing
 
+    // console.assert(1 === 2, 'Wrong')
+    const p = document.querySelector('p')
+    console.assert(p.classList.contains('ouch'), 'Wrong class');
     // clearing
-
+    console.clear();
     // Viewing DOM Elements
-
+    console.log(p);
+    console.dir(p);
+    console.clear();
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age*7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    })
     // counting
-
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Wes');
     // timing
 
   </script>
